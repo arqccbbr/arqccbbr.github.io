@@ -1,9 +1,189 @@
-<html>
+<!doctype html>
+<html lang="pt-BR">
 
-<body>
+<head>
+    <meta charset="utf-8" />
+    <title>TESTE TESTE TESTE</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <script type="text/javascript" src="scripts/script.js"></script>
+</head>
 
-TESTE 3
+<body onload="javascript:loadPreferences();">
+
+<header>
+    <section class="section_acessibilidade">
+        <a href="#main"                                    class="item_responsive_menu"><img src="images/icon_skip.png" class="img_icon" alt="Saltar para conteúdo principal" width="25px"></a>
+        <a href="javascript:changeFontSize();"             class="item_responsive_menu"><img src="images/icon_fontsize.png" class="img_icon" alt="Alterar tamanho da fonte" width="25px"></a>
+        <a href="javascript:changeContrast();"             class="item_responsive_menu"><img src="images/icon_contrast.png" class="img_icon" alt="Alterar contraste" width="25px"></a>
+        <a href="javascript:showHideMenuAcessibilidade();" class="icon_responsive_menu"><img src="images/icon_acessibilidade.png" alt="Acessibilidade" width="30px"></a>
+    </section>
+    <a href="index.html"><img src="images/logo_TESTETESTE.png" class="img_logo" alt="Logotipo TESTE"\></a>
+</header>
+<nav class="navbar">
+    <div class="subnav" tabindex="5">
+      <button type="button" class="subnavbtn">SOBRE</button>
+      <div class="subnav-content">
+        <a href="#company">&#187; TESTE Brasil TESTE TESTE</a>
+        <a href="#team">&#187; TESTE Brasil</a>
+        <a href="#careers">&#187; Tabela de Tarifas</a>
+      </div>
+    </div>
+    <div class="subnav">
+      <button class="subnavbtn">PRODUTOS</button>
+      <div class="subnav-content">
+        <a href="#bring">&#187; Início</a>
+        <a href="#bring">&#187; Consignado Funcionário Público</a>
+        <a href="#deliver">&#187; Consignado INSS</a>
+      </div>
+    </div>
+    <div class="subnav">
+      <button class="subnavbtn">CORRESPONDENTES</button>
+      <div class="subnav-content">
+        <a href="#bring">&#187; Início</a>
+        <a href="#bring">&#187; Encontre um Correspondente</a>
+        <a href="#bring">&#187; Seja um Correspondente</a>
+        <a href="#bring">&#187; Acesso aos Sistemas</a>
+        <a href="#bring">&#187; Certificação de Correspondentes</a>
+      </div>
+    </div>
+    <div class="subnav">
+        <button class="subnavbtn">SERVIÇOS</button>
+        <div class="subnav-content">
+            <a href="#link1">&#187; Cessão de Direitos - Transferência de Dívidas</a>
+            <a href="#link1">&#187; Solicitação de 2ª Via de Boleto</a>
+            <a href="#link1">&#187; Extrato Anual de Encargos</a>
+            <a href="#link1">&#187; Solicitação de Quitação de Contrato</a>
+            <a href="#link1">&#187; Substituição de Garantia</a>
+            <a href="#link1">&#187; Cadastro Positivo</a>
+            <a href="#link1">&#187; Educação TESTE TESTE</a>
+        </div>
+      </div>
+      
+    <div class="subnav">
+        <button class="subnavbtn">ATENDIMENTO</button>
+        <div class="subnav-content">
+          <a href="#link1">&#187; Contato</a>
+          <a href="#link1">&#187; Central de Atendimento</a>
+          <a href="#link1">&#187; SAC</a>
+          <a href="#link1">&#187; Central de Cobrança</a>
+          <a href="#link1">&#187; Central de Cartões</a>
+          <a href="#link1">&#187; Ouvidoria</a>
+          <a href="#link1">&#187; Canal de Denúncia</a>
+          <a href="#link1">&#187; Perguntas Frequentes</a>
+          <a href="#link1">&#187; Privacidade de Dados</a>
+        </div>
+    </div>
+</nav>
+
+<main>
+    <article>
+        <a href="#"><img src="images/banner_destaque.png" class="img_link" width="100%" alt="Banner da matéria em destaque"\></a>    
+    </article>
+    <article role="alert">
+        <img src="images/banner_alerta.png" class="img_centralizada" width="90%" alt="Banner destacando matéria de alerta"\>
+    </article>
+    <h1 id="main">CONHEÇA NOSSOS PRODUTOS E SERVIÇOS</h1>
+    <section class="destaques_produtos" >
+
+        <article class="box_produto" onclick="javascript:location.href('/produtos/emprestimo-consignado-inss.php');" onkeypress="location.href('/produtos/emprestimo-consignado-inss.php');">
+            <div>
+                <h3>Consignado INSS</h3>
+                <img src="images/destaque_inss.jpg" alt="Foto ilustrativa para o produto INSS">
+                <p class="produto_descritivo">Dinheiro rápido e sem burocracia, com desconto no seu benefício.</p>
+            </div>
+            <p class="produto_promocao">EM ATÉ 84 MESES</p>
+        </article>
+        <article class="box_produto" onclick="javascript:location.href('/produtos/portabilidade-de-credito.php');" onkeypress="javascript:location.href('/produtos/portabilidade-de-credito.php');">
+            <div>
+                <h3>Portabilidade</h3>
+                <img src="images/destaque_portabilidade.jpg" alt="Foto ilustrativa para o serviço de Portabilidade">
+                <p class="produto_descritivo">Traga seu empréstimo de outras instituições para a TESTE TESTE TESTE!</p>
+            </div>
+            <p class="produto_promocao">VEJA AS VANTAGENS</p>
+        </article>
+        <article class="box_produto" onclick="javascript:location.href('/produtos/emprestimo-consignado-funcionario-publico.php');" onkeypress="javascript:location.href('/produtos/emprestimo-consignado-funcionario-publico.php');">
+            <div>
+                <h3>Crédito Consignado</h3>
+                <img src="images/destaque_consignado.jpg" alt="Foto ilustrativa para o produto Consignado">
+                <p class="produto_descritivo">Linha de crédito especial para Funcionário Público, sem burocracia com desconto em folha.</p>
+            </div>
+            <p class="produto_promocao">EM ATÉ 96 MESES</p>
+        </article>
+    </section>
+    <section class="lista_direcionamentos">
+        <article>
+            <h2>EMPRÉSTIMOS</h2>
+            <hr size="3" width="270"/>
+            <a href="/produtos/emprestimo-consignado-funcionario-publico.php">CONSIGNADO FUNCIONÁRIO PÚBLICO</a>
+            <hr size="3" width="270"/>
+            <a href="/produtos/emprestimo-consignado-inss.php">CONSIGNADO INSS</a>
+            <hr size="3" width="270"/>
+        </article>
+        <article style="vertical-align: top;">
+            <h2>ACESSO AOS SISTEMAS</h2>
+            <hr size="3" width="270"/>
+            <a href="#">CRÉDITO CONSIGNADO</a>
+            <hr size="3" width="270"/>
+        </article>
+    </section>
+</main>
+
+<hr size="5"/>
+<footer>
+    <aside>
+        <p>SOBRE:
+            <a href="/sobre/">A TESTE TESTE TESTE</a> | 
+            <a href="/sobre/TESTE-brasil/">O TESTE BRASIL</a> | 
+            <a href="/sobre/tarifas/index.php">TABELA DE TARIFAS</a> | 
+            <a href="/sobre/trabalhe/index.php">TRABALHE CONOSCO</a>
+        </p>
+        
+        <p>PRODUTOS:
+            <a href="/produtos/emprestimo-consignado-funcionario-publico.php">FUNCIONÁRIO PÚBLICO</a> | 
+            <a href="/produtos/emprestimo-consignado-inss.php">INSS</a> | 
+            <a href="/produtos/guia-do-credito-consignado.pdf">GUIA DO CRÉDITO CONSIGNADO</a>
+        </p>
+        
+        <p>CORRESPONDENTES:
+            <a href="/correspondentes/">ENCONTRE UM CORRESPONDENTE</a> | 
+            <a href="/correspondentes/seja-um-correspondente.php">SEJA UM CORRESPONDENTE</a> | 
+            <a href="/correspondentes/certificacao-de-correspondentes.php">CERTIFICAÇÃO DE CORRESPONDENTES</a> | 
+            <a href="/correspondentes/acesso-aos-sistemas.php">ACESSO AOS SISTEMAS</a>
+        </p>
+        
+        <p>SERVIÇOS:
+            <a href="/servicos/cessao-de-direitos.php">CESSÃO DE DIREITOS</a> | 
+            <a href="/servicos/boleto-2a-via.php">BOLETO</a> | 
+            <a href="/servicos/extrato-anual.php">EXTRATO ANUAL</a> | 
+            <a href="/servicos/quitacao-de-contrato.php">QUITAÇÃO DE CONTRATO</a> | 
+            <a href="/servicos/substituicao-de-garantia.php">SUBSTITUIÇÃO DE GARANTIA</a> | 
+            <a href="/servicos/cadastro-positivo.php">CADASTRO POSITIVO</a> | 
+            <a href="/servicos/educacao-TESTE TESTE.php">EDUCAÇÃO TESTE TESTE</a> | 
+            <a href="/servicos/clausulas-gerais-do-contrato.pdf">CLÁUSULAS GERAIS DO CONTRATO</a>
+        </p>
+
+        <p>DEMONSTRAÇÕES TESTE TESTES:
+            <a href="#">CLIQUE AQUI PARA VER O DEMONSTRATIVO DE 2023</a>
+        </p>
+        
+        <p>ENGENHARIA SOCIAL:
+            <a href="/img/prevencao-a-engenharia-social.pdf">COMO SE PROTEGER DE FRAUDES E GOLPES FINANCEIROS</a>
+        </p>
+
+        <p>ATENDIMENTO (2ª a 6ª, 9h-18h, exceto feriados nacionais):
+            <a href="/atendimento/">CENTRAL DE ATENDIMENTO </a> | 
+            <a href="/atendimento/sac.php">SAC 088</a> | 
+            <a href="/atendimento/sac.php">DEFICIENTE AUDITIVO OU DE FALA 049</a> | 
+            <a href="/atendimento/central-de-cobranca.php">COBRANÇA 0799</a> | 
+            <a href="/atendimento/central-de-cartoes.php">CAC CARTÃO 030242</a> | 
+            <a href="/atendimento/ouvidoria.php">OUVIDORIA 0842</a> | 
+            <a href="/atendimento/canal-de-denuncia.php">CANAL DE DENÚNCIA</a> | 
+            <a href="/atendimento/perguntas-frequentes.php">PERGUNTAS FREQUENTES</a>
+        </p>
+    </aside>      
+
+    <p class="footer_copyright">TESTE Brasil TESTE TESTE ©2023. Todos os direitos reservados.</p>
+</footer>
 
 </body>
-
 </html>
