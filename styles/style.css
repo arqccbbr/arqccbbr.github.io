@@ -25,10 +25,10 @@
 
 
     /* Variáveis que definem as cores padrão do site. NÃO DEVEM SER utilizadas diretamente. */
-    --primaryDefault: #0065AB;
-    --primaryHighlightDefault: #0044FF;
+    --primaryDefault: #004499;
+    --primaryHighlightDefault: #0044DD;
     --secondaryDefault: #333333;
-    --tertiaryDefault: #EE7700;
+    --tertiaryDefault: #AA4400;
 
     --bgPrimaryDefault: #F0F0F0;
     --bgPrimaryAccentDefault: #999999;
@@ -520,9 +520,11 @@ main .artigo_detalhe .bold {
     background-image: url("../images/bg_detail_1.jpg");
 }
 
+
 .novo_topico {
     margin-top: 30px;
 }
+
 
 *:focus {
     border: 4px;
