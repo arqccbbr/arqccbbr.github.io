@@ -1,2 +1,183 @@
+<!doctype html>
+<html lang="pt-BR">
 
-TESTE Sample Bank
+<head>
+    <meta charset="utf-8" />
+    <title>CCB BRASIL FINANCEIRA</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <script type="text/javascript" src="scripts/script.js"></script>
+</head>
+
+<body onload="javascript:loadPreferences();">
+
+<header>
+    <section class="section_acessibilidade">
+        <a href="#main"                                    class="item_responsive_menu"><img src="images/icon_skip.png" class="img_icon" alt="Saltar para conteúdo principal" width="25px"></a>
+        <a href="javascript:changeFontSize();"             class="item_responsive_menu"><img src="images/icon_fontsize.png" class="img_icon" alt="Alterar tamanho da fonte" width="25px"></a>
+        <a href="javascript:changeContrast();"             class="item_responsive_menu"><img src="images/icon_contrast.png" class="img_icon" alt="Alterar contraste" width="25px"></a>
+        <a href="javascript:showHideMenuAcessibilidade();" class="icon_responsive_menu"><img src="images/icon_acessibilidade.png" alt="Acessibilidade" width="30px"></a>
+    </section>
+    <a href="index.html"><img src="images/logo_financeira.png" class="img_logo" alt="Logotipo CCB Brasil Financeira"\></a>
+</header>
+<nav class="navbar">
+    <div class="subnav" tabindex="5">
+      <button type="button" class="subnavbtn">SOBRE</button>
+      <div class="subnav-content">
+        <a href="sobre-ccb-financeira.php">CCB Brasil Financeira</a>
+        <a href="sobre-ccb-brasil.php">CCB Brasil</a>
+        <a href="sobre-tarifas.php">Tabela de Tarifas</a>
+      </div>
+    </div>
+    <div class="subnav">
+      <button class="subnavbtn">PRODUTOS</button>
+      <div class="subnav-content">
+        <a href="produtos.php">Início</a>
+        <a href="produtos-consignado.php">Consignado Funcionário Público</a>
+        <a href="produtos-inss.php">Consignado INSS</a>
+        <a href="produtos-portabilidade.php">Consignado INSS</a>
+      </div>
+    </div>
+    <div class="subnav">
+      <button class="subnavbtn">CORRESPONDENTES</button>
+      <div class="subnav-content">
+        <a href="correspondentes-encontre.php">Encontre um Correspondente</a>
+        <a href="correspondentes-seja.php">Seja um Correspondente</a>
+        <a href="correspondentes-acesso.php">Acesso aos Sistemas</a>
+        <a href="correspondentes-certificacao.php">Certificação de Correspondentes</a>
+      </div>
+    </div>
+    <div class="subnav">
+        <button class="subnavbtn">SERVIÇOS</button>
+        <div class="subnav-content">
+            <a href="servicos.php">Início</a>
+            <a href="servicos-cessao.php">Cessão de Direitos - Transferência de Dívidas</a>
+            <a href="servicos-2via-boleto.php">Solicitação de 2ª Via de Boleto</a>
+            <a href="servicos-extrato.php">Extrato Anual de Encargos</a>
+            <a href="servicos-quitacao.php">Solicitação de Quitação de Contrato</a>
+            <a href="servicos-garantia.php">Substituição de Garantia</a>
+            <a href="servicos-cadastro.php">Cadastro Positivo</a>
+            <a href="servicos-educacao-financeira.php">Educação Financeira</a>
+        </div>
+      </div>
+      
+    <div class="subnav">
+        <button class="subnavbtn">ATENDIMENTO</button>
+        <div class="subnav-content">
+          <a href="atendimento-contato.php">Contato</a>
+          <a href="atendimento-central-atendimento.php">Central de Atendimento</a>
+          <a href="atendimento-sac.php">SAC</a>
+          <a href="atendimento-central-cobranca.php">Central de Cobrança</a>
+          <a href="atendimento-central-cartoes">Central de Cartões</a>
+          <a href="atendimento-ouvidoria.php">Ouvidoria</a>
+          <a href="atendimento-canal-denuncia.php">Canal de Denúncia</a>
+          <a href="atendimento-faq.php">Perguntas Frequentes</a>
+          <a href="atendimento-privacidade-dados.php">Privacidade de Dados</a>
+        </div>
+    </div>
+</nav>
+
+<main>
+    <article>
+        <a href="https://www.br.ccb.com/menu/Institucional/Noticias/TEM-CARA-DE-GOLPE---Pediram-sua-senha-por-telefone-ou-WhatsApp%3F-298.html"><img src="images/banner_destaque.png" class="img_link" width="100%" alt="Banner da matéria em destaque"\></a>    
+    </article>
+    <article role="alert">
+        <img src="images/banner_alerta.png" class="img_centralizada" width="90%" alt="Banner destacando matéria de alerta"\>
+    </article>
+    <h1 id="main">CONHEÇA NOSSOS PRODUTOS E SERVIÇOS</h1>
+    <section class="destaques_produtos" >
+        <article class="box_produto">
+            <div>
+                <h3>Consignado INSS</h3>
+                <img src="images/destaque_inss.jpg" alt="Foto ilustrativa para o produto INSS">
+                <p class="produto_descritivo">Dinheiro rápido e sem burocracia, com desconto no seu benefício.</p>
+            </div>
+            <p class="produto_promocao">EM ATÉ 84 MESES</p>
+        </article>
+        <article class="box_produto">
+            <div>
+                <h3>Portabilidade</h3>
+                <img src="images/destaque_portabilidade.jpg" alt="Foto ilustrativa para o serviço de Portabilidade">
+                <p class="produto_descritivo">Traga seu empréstimo de outras instituições para a CCB Financeira!</p>
+            </div>
+            <p class="produto_promocao">VEJA AS VANTAGENS</p>
+        </article>
+        <article class="box_produto">
+            <div>
+                <h3>Crédito Consignado</h3>
+                <img src="images/destaque_consignado.jpg" alt="Foto ilustrativa para o produto Consignado">
+                <p class="produto_descritivo">Linha de crédito especial para Funcionário Público, sem burocracia com desconto em folha.</p>
+            </div>
+            <p class="produto_promocao">EM ATÉ 96 MESES</p>
+        </article>
+    </section>
+    <section class="lista_direcionamentos">
+        <article>
+            <h2>EMPRÉSTIMOS</h2>
+            <a href="/produtos/emprestimo-consignado-funcionario-publico.php">CONSIGNADO FUNCIONÁRIO PÚBLICO</a>
+            <a href="/produtos/emprestimo-consignado-inss.php">CONSIGNADO INSS</a>
+        </article>
+        <article>
+            <h2>ACESSO AOS SISTEMAS</h2>
+            <a href="https://webcdc.ccbfinanceira.com.br">CRÉDITO CONSIGNADO</a>
+        </article>
+    </section>
+</main>
+
+<footer>
+    <aside>
+        <p>SOBRE:
+            <a href="/sobre/">A CCB FINANCEIRA</a> | 
+            <a href="/sobre/ccb-brasil/">O CCB BRASIL</a> | 
+            <a href="/sobre/tarifas/index.php">TABELA DE TARIFAS</a> | 
+            <a href="/sobre/trabalhe/index.php">TRABALHE CONOSCO</a>
+        </p>
+        
+        <p>PRODUTOS:
+            <a href="/produtos/emprestimo-consignado-funcionario-publico.php">FUNCIONÁRIO PÚBLICO</a> | 
+            <a href="/produtos/emprestimo-consignado-inss.php">INSS</a> | 
+            <a href="/produtos/guia-do-credito-consignado.pdf">GUIA DO CRÉDITO CONSIGNADO</a>
+        </p>
+        
+        <p>CORRESPONDENTES:
+            <a href="/correspondentes/">ENCONTRE UM CORRESPONDENTE</a> | 
+            <a href="/correspondentes/seja-um-correspondente.php">SEJA UM CORRESPONDENTE</a> | 
+            <a href="/correspondentes/certificacao-de-correspondentes.php">CERTIFICAÇÃO DE CORRESPONDENTES</a> | 
+            <a href="/correspondentes/acesso-aos-sistemas.php">ACESSO AOS SISTEMAS</a>
+        </p>
+        
+        <p>SERVIÇOS:
+            <a href="/servicos/cessao-de-direitos.php">CESSÃO DE DIREITOS</a> | 
+            <a href="/servicos/boleto-2a-via.php">BOLETO</a> | 
+            <a href="/servicos/extrato-anual.php">EXTRATO ANUAL</a> | 
+            <a href="/servicos/quitacao-de-contrato.php">QUITAÇÃO DE CONTRATO</a> | 
+            <a href="/servicos/substituicao-de-garantia.php">SUBSTITUIÇÃO DE GARANTIA</a> | 
+            <a href="/servicos/cadastro-positivo.php">CADASTRO POSITIVO</a> | 
+            <a href="/servicos/educacao-financeira.php">EDUCAÇÃO FINANCEIRA</a> | 
+            <a href="/servicos/clausulas-gerais-do-contrato.pdf">CLÁUSULAS GERAIS DO CONTRATO</a>
+        </p>
+
+        <p>DEMONSTRAÇÕES FINANCEIRAS:
+            <a href="http://www.br.ccb.com/menu/Institucional/Relacoes-com-Investidores/Informacoes-Financeiras/CCB-Financeira/2023-216">CLIQUE AQUI PARA VER O DEMONSTRATIVO DE 2023</a>
+        </p>
+        
+        <p>ENGENHARIA SOCIAL:
+            <a href="/img/prevencao-a-engenharia-social.pdf">COMO SE PROTEGER DE FRAUDES E GOLPES FINANCEIROS</a>
+        </p>
+
+        <p>ATENDIMENTO (2ª a 6ª, 9h-18h, exceto feriados nacionais):
+            <a href="/atendimento/">CENTRAL DE ATENDIMENTO 0300 010 0242</a> | 
+            <a href="/atendimento/sac.php">SAC 0800 725 0048</a> | 
+            <a href="/atendimento/sac.php">DEFICIENTE AUDITIVO OU DE FALA 0800 940 0649</a> | 
+            <a href="/atendimento/central-de-cobranca.php">COBRANÇA 0800 709 0799</a> | 
+            <a href="/atendimento/central-de-cartoes.php">CAC CARTÃO 0300 010 0242</a> | 
+            <a href="/atendimento/ouvidoria.php">OUVIDORIA 0800 725 2242</a> | 
+            <a href="/atendimento/canal-de-denuncia.php">CANAL DE DENÚNCIA</a> | 
+            <a href="/atendimento/perguntas-frequentes.php">PERGUNTAS FREQUENTES</a>
+        </p>
+    </aside>      
+
+    <p class="footer_copyright">CCB Brasil Financeira ©2023. Todos os direitos reservados.</p>
+</footer>
+
+</body>
+</html>
