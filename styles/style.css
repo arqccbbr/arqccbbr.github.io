@@ -172,6 +172,10 @@ nav menu li a {
 nav menu li a:hover {
     background-color: var(--bgTertiary);
     color: var(--onBgTertiary);
+
+    border: 4px;
+    border-style: double;
+    border-color: var(--primaryHighlight);
 }
 
 
@@ -220,6 +224,11 @@ nav menu li a:hover {
 .navbar a:hover, .subnav:hover .subnavbtn {
     background-color: var(--bgTertiary);
     color: var(--onBgTertiary);
+
+    border: 4px;
+    border-style: double;
+    border-color: var(--primaryHighlight);
+
 }
 
 .subnavbtn:focus {
@@ -253,6 +262,10 @@ nav menu li a:hover {
 .subnav-content a:hover {
     background-color: var(--bgTertiary);
     color: var(--onBgTertiary);
+
+    border: 4px;
+    border-style: double;
+    border-color: var(--primaryHighlight);
 }
   
 /* When you move the mouse over the subnav container, open the subnav content */
@@ -290,6 +303,10 @@ footer aside p a {
 footer aside p a:hover {
     color: var(--primaryHighlight);
     text-decoration: underline;
+
+    border: 4px;
+    border-style: double;
+    border-color: var(--primaryHighlight);
 }
 
 
@@ -496,6 +513,10 @@ main .artigo_detalhe p a {
 main .artigo_detalhe p a:hover {
     color: var(--primaryHighlight);
     text-decoration: underline;
+
+    border: 4px;
+    border-style: double;
+    border-color: var(--primaryHighlight);
 }
 
 main .artigo_detalhe .destaque {
@@ -527,6 +548,12 @@ main .artigo_detalhe .bold {
 
 
 *:focus {
+    border: 4px;
+    border-style: double;
+    border-color: var(--primaryHighlight);
+}
+
+a:focus {
     border: 4px;
     border-style: double;
     border-color: var(--primaryHighlight);
