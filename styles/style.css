@@ -1,0 +1,520 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i|Roboto+Condensed:300,400');
+
+
+:root {
+
+    /* Variáveis que definem os tamanhos de fonte default do site. NÃO DEVEM SER utilizadas diretamente. */
+    --fontSizeSmallDefault: 14px;
+    --fontSizeDefault: 16px;
+    --fontSizeLargeDefault: 18px;
+    --fontSizeXLargeDefault: 22px;
+
+    /* Variáveis que definem os tamanhos de fonte com acessibilidade. NÃO DEVEM SER utilizadas diretamente. */
+    --fontSizeSmallAcessibilidade2: 18px;
+    --fontSizeAcessibilidade2: 22px;
+    --fontSizeLargeAcessibilidade2: 26px;
+    --fontSizeXLargeAcessibilidade2: 30px;
+
+    --fontSizeSmallAcessibilidade3: 26px;
+    --fontSizeAcessibilidade3: 30px;
+    --fontSizeLargeAcessibilidade3: 34px;
+    --fontSizeXLargeAcessibilidade3: 38px;
+
+    --imgSaturationFilterContrastON: 0;
+    --imgSaturationFilterContrastOFF: 1;
+
+
+    /* Variáveis que definem as cores padrão do site. NÃO DEVEM SER utilizadas diretamente. */
+    --primaryDefault: #0065AB;
+    --primaryHighlightDefault: #0044FF;
+    --secondaryDefault: #333333;
+    --tertiaryDefault: #EE7700;
+
+    --bgPrimaryDefault: #F0F0F0;
+    --bgPrimaryAccentDefault: #999999;
+    --bgSecondaryDefault: #FFFFFF;
+    --bgTertiaryDefault: #0065AB;
+    --bgCampanhaDefault: #56B17A;
+
+    --onBgTertiaryDefault: #FFFFFF;
+
+    /* Variáveis que definem as cores do site em alto contraste com bg PRETO e fg BRANCO. 
+     * NÃO DEVEM SER utilizadas diretamente. */
+    --primaryContrast2: #FFFF00;
+    --primaryHighlightContrast2: #00FFFF;
+    --secondaryContrast2: #FFFFFF;
+    --tertiaryContrast2: #FFFF00;
+
+    --bgPrimaryContrast2: #000000;
+    --bgPrimaryAccentContrast2: #333333;
+    --bgSecondaryContrast2: #000000;
+    --bgTertiaryContrast2: #005566;
+    --bgCampanhaContrast2: #000000;
+
+    --onBgTertiaryContrast2: #FFFFFF;
+
+    /* Variáveis que definem as cores do site em alto contraste com bg BRANCO e fg PRETO. 
+     * NÃO DEVEM SER utilizadas diretamente. */
+    --primaryContrast3: #002244;
+    --primaryHighlightContrast3: #0000AA;
+    --secondaryContrast3: #000000;
+    --tertiaryContrast3: #000000;
+
+    --bgPrimaryContrast3: #FFFFFF;
+    --bgPrimaryAccentContrast3: #DDDDDD;
+    --bgSecondaryContrast3: #FFFFFF;
+    --bgTertiaryContrast3: #FFFF00;
+    --bgCampanhaContrast3: #FFFFFF;
+
+    --onBgTertiaryContrast3: #000000;
+
+
+    /* Variáveis que serão referenciadas nos estilos, começam com o default e podem mudar
+     * via JavaScript, conforme interação do usuário. */
+    --fontSizeSmall: var(--fontSizeSmallDefault);
+    --fontSize: var(--fontSizeDefault);
+    --fontSizeLarge: var(--fontSizeLargeDefault);
+    --fontSizeXLarge: var(--fontSizeXLargeDefault);
+     
+    --primary: var(--primaryDefault);
+    --primaryHighlight: var(--primaryHighlightDefault);
+    --secondary: var(--secondaryDefault);
+    --tertiary: var(--tertiaryDefault);
+
+    --bgPrimary: var(--bgPrimaryDefault);
+    --bgPrimaryAccent: var(--bgPrimaryAccentDefault);
+    --bgSecondary: var(--bgSecondaryDefault);
+    --bgTertiary: var(--bgTertiaryDefault);
+    --bgCampanha: var(--bgCampanhaDefault);
+
+    --onBgTertiary: var(--onBgTertiaryDefault);
+
+    --imgSaturationFilterContrast: var(--imgSaturationFilterContrastOFF);
+    --imgInvertColor: 0%;
+    --imgOpacity: 60%;
+
+    --displayMenuAcessibilidade: none;
+}
+
+* {
+    font-family: 'Roboto Condensed', sans-serif-condensed, sans-serif;
+    font-size: var(--fontSize);
+    margin: 0;
+}
+
+body {
+    max-width: 768px;
+    margin: auto;
+    background: url("../images/bg_bluegrey.png");
+    background-attachment: fixed;
+}
+
+img {
+    filter: saturate(var(--imgSaturationFilterContrast));
+}
+
+header, footer {
+    background-color: var(--bgPrimary);
+    padding: 5px;
+}
+
+header {
+    display: flex;
+    flex-flow: row-reverse;
+}
+
+footer {
+    border-top: 3px;
+    border-top-style: solid;
+    border-top-color: var(--bgPrimaryAccent);
+}
+
+
+header img {
+    padding: 5px;
+}
+
+.img_logo {
+    width: 300px;
+    margin-top: 5px;
+}
+
+main {
+    background-color: var(--bgSecondary);
+    padding-bottom: 20px;
+}
+
+/********************************************************/
+nav {
+    background-color: var(--bgPrimary);
+    padding-left: 5px;
+}
+
+nav menu{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+  
+nav menu li {
+    float: left;
+}
+  
+nav menu li a {
+    display: block;
+    color: var(--primary);
+    padding: 5px;
+    text-decoration: none;
+    font-size: var(--fontSize);
+}
+  
+nav menu li a:hover {
+    background-color: var(--bgTertiary);
+    color: var(--onBgTertiary);
+}
+
+
+/************************************************************************************/
+
+/* The navigation menu */
+.navbar {
+    overflow: hidden;
+    background-color: var(--bgPrimary);
+}
+  
+/* Navigation links */
+.navbar a {
+    float: left;
+    font-size: var(--fontSize);
+    color: var(--primary);
+    padding: 10px 10px;
+    text-decoration: none;
+}
+  
+/* The subnavigation menu */
+.subnav {
+    float: left;
+    overflow: hidden;
+}
+  
+/* Subnav button */
+.subnav .subnavbtn {
+    font-size: var(--fontSize);
+    border: none;
+    outline: none;
+    color: var(--primary);
+    padding: 8px 12px;
+    margin: 0;
+}
+
+.subnavbtn {
+    background-color: var(--bgPrimary);
+}
+
+.subnav {
+    background-color: var(--bgTertiary);
+}
+  
+/* Add a red background color to navigation links on hover */
+.navbar a:hover, .subnav:hover .subnavbtn {
+    background-color: var(--bgTertiary);
+    color: var(--onBgTertiary);
+}
+
+.subnavbtn:focus {
+    background-color: var(--bgTertiary);
+    color: var(--onBgTertiary);
+}
+
+  
+/* Style the subnav content - positioned absolute */
+.subnav-content {
+    display: none;
+    position: absolute;
+    background-color: var(--bgSecondary);
+    z-index: 1;
+    min-width: 175px;
+
+    border: var(--bgPrimaryAccent);
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 0px 0px 7px 7px;
+}
+  
+/* Style the subnav links */
+.subnav-content a {
+    float: left;
+    color: var(--primary);
+    text-decoration: none;
+}
+  
+/* Add a grey background color on hover */
+.subnav-content a:hover {
+    background-color: var(--bgTertiary);
+    color: var(--onBgTertiary);
+}
+  
+/* When you move the mouse over the subnav container, open the subnav content */
+.subnav:hover .subnav-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.subnav:focus .subnav-content {
+    display: flex;
+    flex-direction: column;
+}
+
+/************************************************************************************/
+
+
+
+
+footer * {
+    margin: 2px;
+}
+
+footer aside p {
+    font-size: var(--fontSizeSmall);
+    color: var(--primary);
+    margin-bottom: 5px;
+}
+  
+footer aside p a {
+    color: var(--secondary);
+    text-decoration: none;
+    font-size: var(--fontSizeSmall);
+}
+  
+footer aside p a:hover {
+    color: var(--primaryHighlight);
+    text-decoration: underline;
+}
+
+
+.footer_copyright {
+    padding: 10px;
+    font-size: var(--fontSizeSmall);
+    text-align: center;
+    color: var(--primary);
+}
+
+.img_centralizada {
+    margin: auto; 
+    display: block;
+}
+
+h1 {
+    padding: 10px;
+    font-size: var(--fontSizeXLarge);
+    color: var(--primary);
+    font-weight: normal;
+}
+
+h2 {
+    font-size: var(--fontSizeLarge);
+    color: var(--tertiary);
+    font-weight: normal;
+}
+
+section.destaques_produtos{
+    display: flex;
+    justify-content: space-around;
+}
+
+section.lista_direcionamentos {
+    margin-top: 10px;
+    padding: 10px;
+    vertical-align: top;
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+section.lista_direcionamentos article {
+    width: 40%;
+}
+
+
+section.lista_direcionamentos article * {
+    display: block;
+    margin-bottom: 5px;
+}
+
+section.lista_direcionamentos article a {
+    text-decoration: none;
+    color: var(--secondary);
+}
+
+section.lista_direcionamentos article a:hover {
+    color: var(--primaryHighlight);
+}
+
+hr {
+    background-color: var(--bgPrimaryAccent);
+    border: 0px;
+}
+
+.img_link:hover {
+    opacity: 0.7;
+}
+
+.section_acessibilidade {
+    margin: auto;
+    margin-right: 0px;
+}
+
+.img_icon {
+    filter: invert(var(--imgInvertColor)) opacity(var(--imgOpacity));
+    -webkit-filter: invert(var(--imgInvertColor)) opacity(var(--imgOpacity));
+}
+
+.icon_responsive_menu {
+    display: none;
+}
+
+.item_responsive_menu {
+    float: left;
+    display: block;
+    padding: 5px;
+}
+
+
+.box_produto {
+    width:27%; 
+    min-height: 290px;
+    padding: 0px;
+    margin: 0px;
+    background-color: var(--bgPrimary); 
+    border-radius: 10px;
+    box-shadow: 1px 2px 5px var(--bgPrimaryAccent);
+    overflow: hidden;
+
+    display: flex; 
+    flex-flow: column; 
+    justify-content: space-between;
+}
+
+.box_produto:hover {
+    cursor: pointer;
+    filter: opacity(60%);
+}
+
+.box_produto .produto_header {
+    background-color: var(--bgTertiary);
+    color: var(--onBgTertiary);
+    text-align: center; 
+    padding:6px;
+    font-weight: normal;
+    font-size: var(--fontSizeLarge);
+}
+
+.box_produto img {
+    width: 100%;
+}
+
+.box_produto .produto_descritivo {
+    text-align: center; 
+    color: var(--secondary);
+    font-size: var(--fontSize);
+    padding: 10px;
+}
+
+.box_produto .produto_promocao {
+    text-align: center; 
+    color: var(--tertiary);
+    font-size: var(--fontSizeXLarge);
+    padding: 10px;
+}
+
+
+@media not (min-width: 600px) {
+    section.destaques_produtos{
+        display: flex;
+        flex-direction: column;
+    }    
+    section.lista_direcionamentos {
+        margin-top: 10px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .section_acessibilidade {
+        margin: auto;
+        margin-right: 0px;
+        display: flex;
+        flex-flow: column-reverse;
+    }
+
+    .icon_responsive_menu {
+        display: block;
+    }
+    .item_responsive_menu {
+        display: var(--displayMenuAcessibilidade);
+        padding: 5px;
+    }
+}
+
+/******************************************************************************/
+/* Estilo das subpaginas */
+/******************************************************************************/
+
+main .artigo_detalhe {
+    padding: 10px;
+}
+
+main .artigo_detalhe p {
+    color: var(--secondary);
+    font-size: var(--fontSizeLarge);
+    line-height: 1.5;
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+main .artigo_detalhe p a {
+    font-size: var(--fontSizeLarge);
+    color: var(--primary);
+}
+
+.artigo_header {
+    font-size: var(--fontSizeXLarge);
+    font-weight: bold;
+}
+
+
+.artigo_subtitulo {
+    font-size: var(--fontSizeXLarge);
+    color: var(--primary);
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+
+main .artigo_detalhe p a:hover {
+    color: var(--primaryHighlight);
+    text-decoration: underline;
+}
+
+main .artigo_detalhe .destaque {
+    color: var(--tertiary);
+    margin-bottom: 0px;
+}
+
+main .artigo_detalhe .bold {
+    font-weight: bold;
+}
+
+.banner_artigo {
+    width: 100%;
+    height: 255px;
+    max-height: 255px;
+    background-color: #00FFFF;
+    background-image: url("../images/bg_detail_1.jpg");
+}
+
+
+.novo_topico {
+    margin-top: 30px;
+}
