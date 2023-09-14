@@ -237,7 +237,7 @@ nav menu li a:hover {
     min-width: 175px;
 
     border: var(--bgPrimaryAccent);
-    border-width: 1px;
+    border-width: 2px;
     border-style: solid;
     border-radius: 0px 0px 7px 7px;
 }
@@ -306,10 +306,10 @@ footer aside p a:hover {
 }
 
 h1 {
-    padding: 10px;
     font-size: var(--fontSizeXLarge);
     color: var(--primary);
     font-weight: normal;
+    margin-bottom: 15px;
 }
 
 h2 {
@@ -349,11 +349,6 @@ section.lista_direcionamentos article a {
 
 section.lista_direcionamentos article a:hover {
     color: var(--primaryHighlight);
-}
-
-hr {
-    background-color: var(--bgPrimaryAccent);
-    border: 0px;
 }
 
 .img_link:hover {
@@ -473,6 +468,12 @@ main .artigo_detalhe p {
     margin-bottom: 15px;
 }
 
+main .artigo_detalhe p strong {
+    color: var(--secondary);
+    font-size: var(--fontSizeLarge);
+    font-weight: bold;
+}
+
 main .artigo_detalhe p a {
     font-size: var(--fontSizeLarge);
     color: var(--primary);
@@ -502,6 +503,11 @@ main .artigo_detalhe .destaque {
     margin-bottom: 0px;
 }
 
+main .artigo_detalhe .destaque strong {
+    color: var(--tertiary);
+}
+
+
 main .artigo_detalhe .bold {
     font-weight: bold;
 }
@@ -513,7 +519,6 @@ main .artigo_detalhe .bold {
     background-color: #00FFFF;
     background-image: url("../images/bg_detail_1.jpg");
 }
-
 
 .novo_topico {
     margin-top: 30px;
