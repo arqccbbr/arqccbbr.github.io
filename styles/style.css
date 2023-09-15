@@ -105,7 +105,7 @@
 body {
     max-width: 768px;
     margin: auto;
-    background: url("../images/bg_bluegrey.png");
+    background: url("../images/bg/bluegrey.png");
     background-attachment: fixed;
 }
 
@@ -545,6 +545,41 @@ main .artigo_detalhe .bold {
 .novo_topico {
     margin-top: 30px;
 }
+
+
+/*** SUBMENU **/
+
+
+.submenu {
+    list-style-type: square;
+    margin: 0;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.submenu li {
+    margin-bottom: 10px;
+}
+
+.submenu li a {
+    color: var(--secondary);
+    text-decoration: none;
+    font-size: var(--fontSize);
+
+}
+  
+.submenu li a:hover {
+    background-color: var(--bgPrimary);
+    color: var(--primary);
+
+    border: 4px;
+    border-style: double;
+    border-color: var(--primaryHighlight);
+}
+
+
+/****************************************************/
+
 
 
 *:focus {
