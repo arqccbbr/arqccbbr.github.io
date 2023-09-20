@@ -4,6 +4,17 @@
     font-size: var(--fontSize);
 }
 
+*:focus {
+    border: 3px;
+    border-style: double;
+    border-color: var(--primaryHighlight);
+}
+
+a:focus {
+    border: 3px;
+    border-style: double;
+    border-color: var(--primaryHighlight);
+}
 
 .margem-minima-abaixo {
     margin: 0px;
@@ -93,7 +104,7 @@
     background-color: var(--bgTertiary);
     color: var(--onBgTertiary);
     text-decoration: none;
-    border: var(--borderThin);
+    border: 3px;
     border-style: solid;
     border-color: var(--onBgTertiary);
     z-index: 50;
@@ -123,17 +134,5 @@ img {
 .img-low-opacity {
     filter: opacity(var(--imgOpacity));
     -webkit-filter: opacity(var(--imgOpacity));
-}
-
-*:focus {
-    border: var(--borderThin);
-    border-style: solid;
-    border-color: var(--primaryHighlight);
-}
-
-a:focus {
-    border: var(--borderThin);
-    border-style: solid;
-    border-color: var(--primaryHighlight);
 }
 

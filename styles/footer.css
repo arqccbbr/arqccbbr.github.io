@@ -6,7 +6,7 @@
     background-color: var(--bgPrimary);
     padding: var(--spaceSmall);
 
-    border-top: var(--spaceTiny);
+    border-top: 4px;
     border-top-style: solid;
     border-top-color: var(--bgPrimaryAccent);
 }
@@ -29,7 +29,7 @@
     color: var(--primaryHighlight);
     text-decoration: underline;
 
-    border: var(--borderThin);
+    border: 3px;
     border-style: solid;
     border-color: var(--primaryHighlight);
 }

@@ -40,7 +40,7 @@
 
 .box-subpagina a:hover {
     color: var(--primary);
-    border-width: var(--borderThick);
+    border-width: 3px;
     border-style: double;
 }
 
