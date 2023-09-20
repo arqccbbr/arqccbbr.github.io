@@ -1,0 +1,191 @@
+.navbar {
+    overflow: hidden;
+    background-color: var(--bgPrimary);
+}
+  
+.navbar a {
+    float: left;
+    font-size: var(--fontSize);
+    color: var(--primary);
+    padding: var(--spaceDefaultAjusteMenos) var(--spaceDefaultAjusteMais);
+    text-decoration: none;
+}
+  
+.subnav {
+    float: left;
+    overflow: hidden;
+    background-color: var(--bgPrimary);
+}
+  
+.subnav .subnavbtn {
+    font-size: var(--fontSize);
+    color: var(--primary);
+    padding: var(--spaceDefaultAjusteMenos) var(--spaceDefaultAjusteMais);
+    margin: 0;
+
+    background-color: var(--bgPrimary);
+
+    border-width: var(--borderThin);
+    border-style: solid;
+    border-color: var(--transparent);
+}
+
+
+.subnavbtn-active {
+    font-size: var(--fontSize);
+    padding: var(--spaceDefaultAjusteMenos) var(--spaceDefaultAjusteMais);
+    margin: 0;
+
+    border-width: var(--borderThin);
+    border-style: solid;
+    border-color: var(--transparent);
+
+    background-color: var(--bgTertiary);
+    color: var(--onBgTertiary);
+}
+  
+.navbar a:hover, .subnav:hover .subnavbtn {
+    background-color: var(--bgTertiary);
+    color: var(--onBgTertiary);
+
+    border: var(--borderThin);
+    border-style: solid;
+    border-color: var(--primaryHighlight);
+}
+
+.subnav-content {
+    display: none;
+    position: absolute;
+    background-color: var(--bgSecondary);
+    z-index: 5;
+    min-width: 175px;
+
+    flex-direction: column;
+
+    border: var(--bgPrimaryAccent);
+    border-width: var(--borderThin);
+    border-style: solid;
+    border-radius: 0px 0px 7px 7px;
+}
+  
+.subnav-content a {
+    float: left;
+    color: var(--primary);
+    text-decoration: none;
+
+    border: var(--borderThin);
+    border-style: solid;
+    border-color: var(--transparent);
+}
+  
+.subnav-content a:hover {
+    background-color: var(--bgTertiary);
+    color: var(--onBgTertiary);
+
+    border: var(--borderThin);
+    border-style: solid;
+    border-color: var(--primaryHighlight);
+}
+  
+.subnav:hover .subnav-content {
+    display: flex;
+}
+
+.subnavbtn:focus {
+    background-color: var(--bgTertiary);
+    color: var(--onBgTertiary);
+}
+
+@media not (min-width: 600px) {
+
+    #main_nav .subnav {
+        display: var(--displayMenuPrincipal);
+        width: 100%;
+        background-color: var(--bgPrimary);
+    }
+
+    .navbar a {
+        display: inline;
+        float: none;
+        width: 100%;
+        font-size: var(--fontSize);
+        color: var(--primary);
+        padding: var(--spaceDefaultAjusteMenos) var(--spaceDefaultAjusteMais);
+        text-decoration: none;
+    }
+          
+    .subnavbtn {
+        width: 100%;
+        text-align: start;
+        background-color: var(--bgPrimary);
+        font-size: var(--fontSize);
+        color: var(--primary);
+        padding: var(--spaceDefaultAjusteMenos) var(--spaceDefaultAjusteMais);
+        margin: 0;
+    
+        border-width: 0px;
+    }
+    
+    .subnavbtn-active {
+        width: 100%;
+        text-align: start;
+        font-size: var(--fontSize);
+        padding: var(--spaceDefaultAjusteMenos) var(--spaceDefaultAjusteMais);
+        margin: 0;
+    
+        border-width: 0px;
+    
+        background-color: var(--bgTertiary);
+        color: var(--onBgTertiary);
+    }
+      
+    .navbar a:hover, .subnav:hover .subnavbtn {
+        width: 100%;
+        text-align: start;
+        background-color: var(--bgTertiary);
+        color: var(--onBgTertiary);
+    
+        border-width: 0px;
+    }
+    
+    .subnav-content {
+        position: relative;
+        display: none;
+        background-color: var(--bgSecondary);
+        z-index: 5;
+        width: 100%;
+        border: 0px;
+    }
+      
+    .subnav-content a {
+        display: block;
+        width: 100%;
+
+        color: var(--secondary);
+        text-decoration: none;
+    
+        border-width: 0px;
+    }
+      
+    .subnav-content a:hover {
+        background-color: var(--bgTertiary);
+        color: var(--onBgTertiary);
+    
+        border-width: 0px;
+    }
+      
+    .subnav:hover .subnav-content {
+        display: block;
+    }
+    
+    .subnavbtn:focus {
+        width: 100%;
+        text-align: start;
+        background-color: var(--bgTertiary);
+        color: var(--onBgTertiary);
+
+        border-width: 0px;
+    }
+
+}
+

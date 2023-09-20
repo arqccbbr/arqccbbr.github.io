@@ -1,0 +1,115 @@
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i|Roboto+Condensed:300,400');
+
+:root {
+
+    /* Variáveis que definem os tamanhos de fonte default do site. NÃO DEVEM SER utilizadas diretamente. */
+    --fontSizeSmallDefault: 14px;
+    --fontSizeDefault: 16px;
+    --fontSizeLargeDefault: 18px;
+    --fontSizeXLargeDefault: 22px;
+
+    /* Variáveis que definem os tamanhos de fonte com acessibilidade. NÃO DEVEM SER utilizadas diretamente. */
+    --fontSizeSmallAcessibilidade2: 18px;
+    --fontSizeAcessibilidade2: 22px;
+    --fontSizeLargeAcessibilidade2: 26px;
+    --fontSizeXLargeAcessibilidade2: 30px;
+
+    --fontSizeSmallAcessibilidade3: 24px;
+    --fontSizeAcessibilidade3: 28px;
+    --fontSizeLargeAcessibilidade3: 32px;
+    --fontSizeXLargeAcessibilidade3: 36px;
+
+    --imgSaturationFilterContrastON: 0;
+    --imgSaturationFilterContrastOFF: 1;
+
+
+    /* Variáveis que definem as cores padrão do site. NÃO DEVEM SER utilizadas diretamente. */
+    --primaryDefault: #004499;
+    --primaryHighlightDefault: #0044DD;
+    --secondaryDefault: #333333;
+    --tertiaryDefault: #AA4400;
+
+    --bgPrimaryDefault: #F0F0F0;
+    --bgPrimaryAccentDefault: #999999;
+    --bgSecondaryDefault: #FFFFFF;
+    --bgTertiaryDefault: #0065AB;
+    --bgCampanhaDefault: #56B17A;
+
+    --onBgTertiaryDefault: #FFFFFF;
+
+    /* Variáveis que definem as cores do site em alto contraste com bg PRETO e fg BRANCO. 
+     * NÃO DEVEM SER utilizadas diretamente. */
+    --primaryContrast2: #FFFF00;
+    --primaryHighlightContrast2: #00FFFF;
+    --secondaryContrast2: #FFFFFF;
+    --tertiaryContrast2: #FFFF00;
+
+    --bgPrimaryContrast2: #000000;
+    --bgPrimaryAccentContrast2: #333333;
+    --bgSecondaryContrast2: #000000;
+    --bgTertiaryContrast2: #005566;
+    --bgCampanhaContrast2: #000000;
+
+    --onBgTertiaryContrast2: #FFFFFF;
+
+    /* Variáveis que definem as cores do site em alto contraste com bg BRANCO e fg PRETO. 
+     * NÃO DEVEM SER utilizadas diretamente. */
+    --primaryContrast3: #002244;
+    --primaryHighlightContrast3: #0000AA;
+    --secondaryContrast3: #000000;
+    --tertiaryContrast3: #000000;
+
+    --bgPrimaryContrast3: #FFFFFF;
+    --bgPrimaryAccentContrast3: #DDDDDD;
+    --bgSecondaryContrast3: #FFFFFF;
+    --bgTertiaryContrast3: #FFFF00;
+    --bgCampanhaContrast3: #FFFFFF;
+
+    --onBgTertiaryContrast3: #000000;
+
+
+    /* Variáveis que serão referenciadas nos estilos, começam com o default e podem mudar
+     * via JavaScript, conforme interação do usuário. */
+    --fontSizeSmall: var(--fontSizeSmallDefault);
+    --fontSize: var(--fontSizeDefault);
+    --fontSizeLarge: var(--fontSizeLargeDefault);
+    --fontSizeXLarge: var(--fontSizeXLargeDefault);
+     
+    --primary: var(--primaryDefault);
+    --primaryHighlight: var(--primaryHighlightDefault);
+    --secondary: var(--secondaryDefault);
+    --tertiary: var(--tertiaryDefault);
+    --transparent: rgba(0, 0, 0, 0);
+    --error: #FF0000;
+
+    --bgPrimary: var(--bgPrimaryDefault);
+    --bgPrimaryAccent: var(--bgPrimaryAccentDefault);
+    --bgSecondary: var(--bgSecondaryDefault);
+    --bgTertiary: var(--bgTertiaryDefault);
+    --bgCampanha: var(--bgCampanhaDefault);
+
+    --onBgTertiary: var(--onBgTertiaryDefault);
+
+    --imgSaturationFilterContrast: var(--imgSaturationFilterContrastOFF);
+    --imgInvertColor: 0%;
+    --imgOpacity: 60%;
+
+    --displayMenuAcessibilidade: none;
+    --displayMenuPrincipal: none;
+
+    --spaceTiny: 2px;
+    --spaceSmall: 5px;
+    --spaceDefaultAjusteMenos: 8px;
+    --spaceDefault: 10px;
+    --spaceDefaultAjusteMais: 12px;
+    --spaceLarge: 15px;
+    --spaceXLarge: 20px;
+
+    --borderThin: 2px;
+    --borderThick: 3px;
+
+    --touchSize:25px;
+    --touchSizeLarge:30px;
+}
+
