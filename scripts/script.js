@@ -1,5 +1,3 @@
-
-
 var currentContrast = 1;
 var currentFontSize = 1; 
 
@@ -171,3 +169,265 @@ function showHideMenuAcessibilidade() {
     }
 
 }
+
+function showHideMenuPrincipal() {
+
+    var r = document.querySelector(':root');
+    var rs = getComputedStyle(r);
+
+    currDisplay = rs.getPropertyValue("--displayMenuPrincipal");
+
+    if (currDisplay == "none") {
+        r.style.setProperty('--displayMenuPrincipal', "block");
+    }
+    else {
+        r.style.setProperty('--displayMenuPrincipal', "none");
+    }
+
+}
+
+function posicionarLinkHome() {
+    var logohome = document.getElementById("link_home");
+    logohome.focus();
+}
+
+
+document.addEventListener("keydown", (event) => {
+    const keyName = event.key;
+
+    /*
+    if (keyName === "Alt") {
+        destacarAtalhos(true);
+    }*/
+}, false);
+
+
+/***********************************************************************************************/
+/** MENU *********/
+/***********************************************************************************************/
+
+var menus = [
+    "menu_sobre",
+    "menu_produtos",
+    "menu_servicos",
+    "menu_correspondentes",
+    "menu_contato",
+];
+
+var submenus = [
+    "submenu_sobre",
+    "submenu_produtos",
+    "submenu_servicos",
+    "submenu_correspondentes",
+    "submenu_contato",
+];
+
+var currActiveMenu = "";
+
+function showSubmenu(menu) {
+
+    if (document.getElementById(menu).ariaExpanded && document.getElementById(menu).ariaExpanded == "true") {
+        hideOnly(menu);
+        return;
+    }
+
+    hideSubmenusExcept(menu);
+
+    document.getElementById("sub" + menu).style.display = "flex";
+    document.getElementById(menu).className = "subnavbtn-active";
+
+    document.getElementById(menu).ariaExpanded = true;
+}
+
+function hideOnly(menu) {
+
+    hideSubmenusExcept(menu);
+
+    var submenu = document.getElementById("sub" + menu);
+    submenu.style.display = "none";
+
+    document.getElementById(menu).ariaExpanded = false;
+}
+
+function hideAllSubmenus() {
+
+    if (currActiveMenu == "") {
+        return;
+    }
+
+    for (i = 0; i < submenus.length; i++) {
+        var sub = submenus[i];
+        document.getElementById(sub).style.display = "none";
+    }
+    for (i = 0; i < menus.length; i++) {
+        document.getElementById(menus[i]).className = "subnavbtn";
+        document.getElementById(menus[i]).ariaExpanded = false;
+    }
+
+    currActiveMenu = "";
+
+}
+
+function hideSubmenusExcept(newActiveMenu) {
+
+    if (currActiveMenu == newActiveMenu) {
+        return;
+    }
+    currActiveMenu = newActiveMenu;
+
+    for (i = 0; i < submenus.length; i++) {
+        var sub = submenus[i];
+        if (sub != ("sub" + currActiveMenu)) {
+            document.getElementById(sub).style.display = "none";
+        }
+    }
+    
+    for (i = 0; i < menus.length; i++) {
+        var menu = menus[i];
+        if (menu != currActiveMenu) {
+            document.getElementById(menu).className = "subnavbtn";
+            document.getElementById(menu).ariaExpanded = false;
+        }
+    }
+
+}
+
+
+
+/***********************************************************************************************/
+
+
+document.addEventListener("keyup", (event) => {
+    const keyName = event.key;
+   
+    if (keyName === "Escape") {
+        posicionarLinkHome();
+    }
+    if (keyName === "ArrowUp") {
+        if (currActiveMenu != "") {
+            document.getElementById(currActiveMenu).focus();
+            hideAllSubmenus();
+        }
+    }
+    if (keyName === "ArrowDown") {
+        if (currActiveMenu != "") {
+            showSubmenu(currActiveMenu);
+        }
+    }
+
+    /*
+    if (keyName === "Alt") {
+        destacarAtalhos(false);
+    }*/
+}, false);
+
+
+function ignition() {
+
+    loadPreferences();
+
+    setTimeout(() => {
+        loadListeners();
+    }, 1000);
+
+}
+
+
+function loadListeners() {
+
+    var mainNav = document.getElementById("main_nav");
+
+    if (mainNav == null) {
+        setTimeout(() => {
+            loadListeners();
+        }, 1000);
+        return;
+    }
+
+    mainNav.addEventListener("mouseleave", (e) => {
+        hideAllSubmenus();
+    });
+
+    document.getElementById("link_home").addEventListener("focus", (e) => {
+        hideAllSubmenus();
+    });
+
+    
+    // evento de saida da div de submenus
+    document.getElementById(submenus[0]).addEventListener("mouseleave", (e) => {
+        hideOnly(submenus[0]);
+    });
+    document.getElementById(submenus[1]).addEventListener("mouseleave", (e) => {
+        hideOnly(submenus[1]);
+    });
+    document.getElementById(submenus[2]).addEventListener("mouseleave", (e) => {
+        hideOnly(submenus[2]);
+    });
+    document.getElementById(submenus[3]).addEventListener("mouseleave", (e) => {
+        hideOnly(submenus[3]);
+    });
+    document.getElementById(submenus[4]).addEventListener("mouseleave", (e) => {
+        hideOnly(submenus[4]);
+    });
+
+    // eventos de interação com o botão do menu
+    // SOBRE
+    document.getElementById(menus[0]).addEventListener("click", (e) => {
+        showSubmenu(menus[0]);
+    });
+    document.getElementById(menus[0]).addEventListener("focus", (e) => {
+        hideSubmenusExcept(menus[0]);
+    });        
+    document.getElementById(menus[0]).addEventListener("mouseover", (e) => {
+        showSubmenu(menus[0]);
+    });
+    // PRODUTOS
+    document.getElementById(menus[1]).addEventListener("click", (e) => {
+        showSubmenu(menus[1]);
+    });
+    document.getElementById(menus[1]).addEventListener("focus", (e) => {
+        hideSubmenusExcept(menus[1]);
+    });        
+    document.getElementById(menus[1]).addEventListener("mouseover", (e) => {
+        showSubmenu(menus[1]);
+    });
+    // CORRESPONDENTES
+    document.getElementById(menus[2]).addEventListener("click", (e) => {
+        showSubmenu(menus[2]);
+    });
+    document.getElementById(menus[2]).addEventListener("focus", (e) => {
+        hideSubmenusExcept(menus[2]);
+    });        
+    document.getElementById(menus[2]).addEventListener("mouseover", (e) => {
+        showSubmenu(menus[2]);
+    });
+    // SERVIÇOS
+    document.getElementById(menus[3]).addEventListener("click", (e) => {
+        showSubmenu(menus[3]);
+    });
+    document.getElementById(menus[3]).addEventListener("focus", (e) => {
+        hideSubmenusExcept(menus[3]);
+    });        
+    document.getElementById(menus[3]).addEventListener("mouseover", (e) => {
+        showSubmenu(menus[3]);
+    });
+    // CONTATO
+    document.getElementById(menus[4]).addEventListener("click", (e) => {
+        showSubmenu(menus[4]);
+    });
+    document.getElementById(menus[4]).addEventListener("focus", (e) => {
+        hideSubmenusExcept(menus[4]);
+    });        
+    document.getElementById(menus[4]).addEventListener("mouseover", (e) => {
+        showSubmenu(menus[4]);
+    });
+
+    document.getElementById("last_submenu_item").addEventListener("blur", (e) => {
+        hideAllSubmenus();
+    });
+}
+
+
+document.addEventListener("load", 
+    ignition()
+);
