@@ -1,95 +1,164 @@
 <!doctype html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <html lang="pt-BR">
 
 <head>
     <meta charset="utf-8" />
     <title>CCB BRASIL FINANCEIRA</title>
-    <link rel="stylesheet" href="styles/style.css" />
-    <script type="text/javascript" src="scripts/script.js"></script>
+    <link rel="stylesheet" href="/styles/config.css" />
+    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="stylesheet" href="/styles/menu.css" />
+    <link rel="stylesheet" href="/styles/header.css" />
+    <link rel="stylesheet" href="/styles/footer.css" />
+            <link rel="stylesheet" href="/styles/home.css" />
+    
+    <script type="text/javascript" src="/scripts/script.js"></script>
 </head>
 
 <body>
 
-<header>
-    <section class="section_acessibilidade">
-        <a href="#main" accesskey="m"                      class="item_responsive_menu"><img src="images/icons/skip_block.png" class="img_icon" alt="Saltar para conteúdo principal" width="25px"></a>
-        <a href="javascript:changeFontSize();"             class="item_responsive_menu"><img src="images/icons/font_size.png" class="img_icon" alt="Alterar tamanho da fonte" width="25px"></a>
-        <a href="javascript:changeContrast();"             class="item_responsive_menu"><img src="images/icons/contrast.png" class="img_icon" alt="Alterar contraste" width="25px"></a>
-        <a href="javascript:showHideMenuAcessibilidade();" class="icon_responsive_menu"><img src="images/icons/acessibilidade.png" alt="Acessibilidade" width="30px"></a>
+<a href="#main" accesskey="p" class="shortcut-hidden">Conteúdo principal</a>
+<a href="#menu_sobre" accesskey="m" class="shortcut-hidden">Menu principal</a>
+
+<header id="main_header">
+    <a href="javascript:showHideMenuPrincipal();"  id="bt_menu_responsive" role="button"><img src="/images/icons/menu.png" alt="Abrir o menu principal" class="img-icon img-contrast-sensitive"></a>
+    <section class="box-acessibilidade">
+        <a role="button" href="javascript:changeFontSize();"             class="responsive-menu_item" accesskey="t"><img src="/images/icons/font_size.png" class="img-button img-contrast-sensitive" alt="Alterar tamanho da fonte"></a>
+        <a role="button" href="javascript:changeContrast();"             class="responsive-menu_item" accesskey="l" ><img src="/images/icons/contrast.png" class="img-button img-contrast-sensitive" alt="Alterar contraste"></a>
+        <a role="button" href="javascript:showHideMenuAcessibilidade();" class="responsive-menu_icon"><img src="/images/icons/acessibilidade.png" class="img-icon" alt="Opções de Acessibilidade"></a>
         <noscript>
             <p>Habilite os scripts para utilizar as opções de acessibilidade: tamanho da fonte e contraste.</p>
         </noscript>
     </section>
-    <a href="index.html"><img src="images/logo_financeira.png" class="img_logo" alt="Logotipo CCB Brasil Financeira"\></a>
+    <a role="button" id="link_home" href="/index.php" accesskey="h"><img src="/images/logo_financeira.png" id="img_main_logo" alt="Logotipo CCB Brasil Financeira link para homepage"\></a>
 </header>
-<nav>
-    <menu>
-        <li><a href="/sobre/">SOBRE</a></li>
-        <li><a href="/produtos/">PRODUTOS</a></li>
-        <li><a href="/correspondentes/">CORRESPONDENTES</a></li>
-        <li><a href="/servicos/">SERVIÇOS</a></li>
-        <li><a href="/atendimento/">ATENDIMENTO</a></li>
-    </menu>
-</nav>
-
-<!-- *************************************************************************************************** -->
-<!-- * FIM DO INCLUDE DO HEADER * -->
-<!-- *************************************************************************************************** -->
-
-
-<main>
-    <img src="images/headers/produtos_servicos.jpg" width="100%" alt="Banner decorativo"\>
-
-    <menu class="submenu">
-        <li><a href="/sobre/">SERVIÇOS</a></li>
-        <li><a href="/produtos/">CESSÃO DE DIREITOS – TRANSFERÊNCIA DE DÍVIDAS</a></li>
-        <li><a href="/correspondentes/">SOLICITAÇÃO DE 2ª VIA DE BOLETO</a></li>
-        <li><a href="/servicos/">EXTRATO ANUAL DE ENCARGOS</a></li>
-        <li><a href="/atendimento/">SOLICITAÇÃO DE QUITAÇÃO DE CONTRATO</a></li>
-        <li><a href="/atendimento/">SUBSTITUIÇÃO DE GARANTIA</a></li>
-        <li><a href="/atendimento/">CADASTRO POSITIVO</a></li>
-        <li><a href="/atendimento/">EDUCAÇÃO FINANCEIRA</a></li>
-    </menu>
-
-    <article class="artigo_detalhe">
-        <h1 id="main" class="artigo_header">Cessão de Direitos - Transferência de Dívidas</h1>
-
-        <p>Cessão de Direitos é a troca do atual financiado por um terceiro. Para iniciar uma solicitação de Cessão de Direitos, o cliente deve estar com as parcelas em dia e entrar em contato a Central de Atendimento CCB Brasil Financeira.</p>
-        <p>Após a solicitação, a área responsável fará contato para obtenção de informações adicionais desta requisição e análise de crédito;</p>    
-        <p>Após aprovação, a CCB Brasil Financeira solicitará o pagamento da Tarifa de Aditamento, assinatura do Instrumento de Aditamento Contratual e envio de todos os documentos necessários;</p>
-        <p>Os documentos devem ser encaminhados para o endereço abaixo:</p>
-        
-        
-        <p class="destaque"><strong>CCB Brasil Financeira</strong></p>
-        <p class="destaque">Av. Paulista 283, 15º andar</p>
-        <p class="destaque">Bela Vista - São Paulo - SP</p>
-        <p class="destaque">CEP 01311-000</p>
-        <p class="destaque"><strong>A/C Formalização</strong></p>       
-                
-        
-        <p class="novo_topico">Se for reprovada, a CCB Brasil Financeira irá contatar o cliente.</p> 
-        <p><a href="contrato.pdf">Instrumento de Aditamento Contratual</a></p>
-
-        <h2 class="artigo_subtitulo">Como incluir seu nome</h2>
-
-        <p>A abertura do Cadastro Positivo não está condicionada apenas aos registros de adimplente. Informações de relacionamento negativo com as instituições também serão acessíveis.</p>
-        <p>Para autorizar o acesso aos seus dados pelas instituições, procure pessoalmente um <a href="correspondente.php">Correspondente</a> mais próximo e leve seu RG, CPF e o <a href="termo.php">Termo de Autorização</a> preenchido.</p>
+<main id="main_content">
+    <a href="https://www.br.ccb.com/menu/Institucional/Noticias/TEM-CARA-DE-GOLPE---Pediram-sua-senha-por-telefone-ou-WhatsApp%3F-298.html" role="button">
+        <img class="img-banner-main" src="images/home/banner_destaque.png" alt="Vamos juntos combater as fraudes. Uma campanha ABBC. Apoio CCB. Saiba mais, link para novo sítio."\>
+    </a>     
+    <article role="alert" class="box-alerta">
+        <div class="box-alerta_box-img">
+            <img src="images/home/atencao_carta.png" class="box-alerta_box-img_img" role="img" alt="Ícone de Alerta">
+        </div>
+        <div class="box-alerta_box-txt">
+            <p class="fonte-grande justificado cor-secundaria margem-abaixo">
+                A CCB Financeira não exige qualquer tipo de depósito prévio para obtenção de empréstimos ou financiamentos, nem envia e-mails ou mensagens com link para boletos ou qualquer outro tipo de cobrança ou finalidade.
+            </p>
+            <p class="fonte-grande justificado cor-primaria bold">
+                Desconfie de e-mails desta natureza, mesmo em nome de empresas. O remetente pode ter sido alterado.
+            </p>
+        </div>
     </article>
 
+    <section id="main" class="box-main" >
+
+        <h1>CONHEÇA NOSSOS PRODUTOS E SERVIÇOS</h1>
+
+        <div class="box-produtos">
+            <div class="box-produtos_produto">
+                <div>
+                    <p class="box-produtos_produto-header">Consignado INSS</p>
+                    <img src="images/home/destaque_inss.jpg" alt="Foto ilustrativa para o produto INSS">
+                    <p class="box-produtos_produto-descritivo">Dinheiro rápido e sem burocracia, com desconto no seu benefício.</p>
+                </div>
+                <p class="box-produtos_produto-destaque">EM ATÉ 84 MESES</p>
+                <a href="/produtos/emprestimo-consignado-inss.php" class="bt-saiba-mais" aria-label="Saiba mais sobre o consignado INSS" role="button">SAIBA MAIS</a>
+            </div>
+            <div class="box-produtos_produto">
+                <div>
+                    <p class="box-produtos_produto-header">Portabilidade</p>
+                    <img src="images/home/destaque_portabilidade.jpg" alt="Foto ilustrativa para a Portabilidade">
+                    <p class="box-produtos_produto-descritivo">Traga seu empréstimo de outras instituições para a CCB Financeira!</p>
+                </div>
+                <p class="box-produtos_produto-destaque">VEJA AS VANTAGENS</p>
+                <a href="/produtos/portabilidade-de-credito.php" class="bt-saiba-mais" aria-label="Saiba mais sobre a Portabilidade" role="button">SAIBA MAIS</a>
+            </div>
+            <div class="box-produtos_produto">
+                <div>
+                    <p class="box-produtos_produto-header">Crédito Consignado</p>
+                    <img src="images/home/destaque_consignado.jpg" alt="Foto ilustrativa para o produto Consignado">
+                    <p class="box-produtos_produto-descritivo">Linha de crédito especial para Funcionário Público, sem burocracia com desconto em folha.</p>
+                </div>
+                <p class="box-produtos_produto-destaque">EM ATÉ 96 MESES</p>
+                <a href="/produtos/emprestimo-consignado-funcionario-publico.php" class="bt-saiba-mais" aria-label="Saiba mais sobre o crédito consignado" role="button">SAIBA MAIS</a>
+            </div>
+        </div>
+    </section>
+    <section class="box-main-links">
+        <div class="box-main-links_grupo">
+            <h2>EMPRÉSTIMOS</h2>
+            <a href="/produtos/emprestimo-consignado-funcionario-publico.php">CONSIGNADO FUNCIONÁRIO PÚBLICO</a>
+            <a href="/produtos/emprestimo-consignado-inss.php">CONSIGNADO INSS</a>
+        </div>
+        <div class="box-main-links_grupo">
+            <h2>ACESSO AOS SISTEMAS</h2>
+            <a href="https://webcdc.ccbfinanceira.com.br">CRÉDITO CONSIGNADO</a>
+        </div>
+    </section>
 </main>
 
-
-<!-- *************************************************************************************************** -->
-<!-- * INÍCIO DO INCLUDE DO FOOTER * -->
-<!-- *************************************************************************************************** -->
-
-<footer>
+<nav class="navbar" id="main_nav" role="menu">
+    <div class="subnav">
+      <button class="subnavbtn" id="menu_sobre" role="menuitem" accesskey="s">SOBRE</button>
+      <div class="subnav-content" id="submenu_sobre" role="menu">
+        <a role="menuitem" href="/sobre/">CCB Brasil Financeira</a>
+        <a role="menuitem" href="/sobre/ccb-brasil.php">CCB Brasil</a>
+        <a role="menuitem" href="/sobre/trabalhe-conosco.php">Trabalhe Conosco</a>
+      </div>
+    </div>
+    <div class="subnav">
+      <button class="subnavbtn" id="menu_produtos" role="menuitem" accesskey="r">PRODUTOS</button>
+      <div class="subnav-content" id="submenu_produtos" role="menu">
+        <a role="menuitem" href="/produtos/">Início</a>
+        <a role="menuitem" href="/produtos/emprestimo-consignado-funcionario-publico.php">Consignado Funcionário Público</a>
+        <a role="menuitem" href="/produtos/emprestimo-consignado-inss.php">Consignado INSS</a>
+        <a role="menuitem" href="/produtos/portabilidade-de-credito.php">Portabilidade de Crédito</a>
+      </div>
+    </div>
+    <div class="subnav">
+      <button class="subnavbtn" id="menu_correspondentes" role="menuitem" accesskey="c">CORRESPONDENTES</button>
+      <div class="subnav-content" id="submenu_correspondentes" role="menu">
+        <a role="menuitem" href="/correspondentes/">Encontre um Correspondente</a>
+        <a role="menuitem" href="/correspondentes/seja-um-correspondente.php">Seja um Correspondente</a>
+        <a role="menuitem" href="/correspondentes/acesso-aos-sistemas.php">Acesso aos Sistemas</a>
+        <a role="menuitem" href="/correspondentes/certificacao-de-correspondentes.php">Certificação de Correspondentes</a>
+      </div>
+    </div>
+    <div class="subnav">
+        <button class="subnavbtn" id="menu_servicos" role="menuitem" accesskey="v">SERVIÇOS</button>
+        <div class="subnav-content" id="submenu_servicos" role="menu">
+            <a role="menuitem" href="/servicos/">Início</a>
+            <a role="menuitem" href="/servicos/cessao-de-direitos.php">Cessão de Direitos</a>
+            <a role="menuitem" href="/servicos/boleto-2a-via.php">Boleto 2ª Via</a>
+            <a role="menuitem" href="/servicos/extrato-anual.php">Extrato Anual</a>
+            <a role="menuitem" href="/servicos/quitacao-de-contrato.php">Quitação de Contrato</a>
+            <a role="menuitem" href="/servicos/substituicao-de-garantia.php">Substituição de Garantia</a>
+            <a role="menuitem" href="/servicos/cadastro-positivo.php">Cadastro Positivo</a>
+            <a role="menuitem" href="/servicos/educacao-financeira.php">Educação Financeira</a>
+            <a role="menuitem" href="/servicos/tarifas.php">Tabela de Tarifas</a>
+        </div>
+    </div>  
+    <div class="subnav">
+        <button class="subnavbtn" id="menu_contato" role="menuitem" accesskey="a">CONTATO</button>
+        <div class="subnav-content" id="submenu_contato" role="menu">
+          <a role="menuitem" href="/atendimento/">Atendimento ao Cliente</a>
+          <a role="menuitem" href="/atendimento/central-de-atendimento.php">Central de Atendimento</a>
+          <a role="menuitem" href="/atendimento/sac.php">SAC</a>
+          <a role="menuitem" href="/atendimento/central-de-cobranca.php">Central de Cobrança</a>
+          <a role="menuitem" href="/atendimento/central-de-cartoes.php">Central de Cartões</a>
+          <a role="menuitem" href="/atendimento/ouvidoria.php">Ouvidoria</a>
+          <a role="menuitem" href="/atendimento/canal-de-denuncia.php">Canal de Denúncia</a>
+          <a role="menuitem" href="/atendimento/perguntas-frequentes.php">Perguntas Frequentes</a>
+          <a role="menuitem" href="/atendimento/privacidade-de-dados.php" id="last_submenu_item">Privacidade de Dados</a>
+        </div>
+    </div>
+</nav><footer id="main_footer">
     <aside>
         <p>SOBRE:
             <a href="/sobre/">A CCB FINANCEIRA</a> | 
-            <a href="/sobre/ccb-brasil/">O CCB BRASIL</a> | 
-            <a href="/sobre/tarifas/index.php">TABELA DE TARIFAS</a> | 
-            <a href="/sobre/trabalhe/index.php">TRABALHE CONOSCO</a>
+            <a href="/sobre/ccb-brasil.php">O CCB BRASIL</a> | 
+            <a href="/sobre/tarifas.php">TABELA DE TARIFAS</a> | 
+            <a href="/sobre/trabalhe-conosco.php">TRABALHE CONOSCO</a>
         </p>
         
         <p>PRODUTOS:
@@ -136,7 +205,7 @@
         </p>
     </aside>      
 
-    <p class="footer_copyright">CCB Brasil Financeira ©2023. Todos os direitos reservados.</p>
+    <p class="footer-copyright">CCB Brasil Financeira ©2023. Todos os direitos reservados.</p>
 </footer>
 
 </body>
