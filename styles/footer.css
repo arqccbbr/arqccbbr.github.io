@@ -1,3 +1,15 @@
+*:focus {
+    border: 4px;
+    border-style: double;
+    border-color: var(--primaryHighlight);
+}
+
+a:focus, a:hover {
+    border: 4px;
+    border-style: double;
+    border-color: var(--primaryHighlight);
+}
+
 #main_footer * {
     margin: var(--spaceTiny);
 }

@@ -1,3 +1,14 @@
+*:focus {
+    border: 4px;
+    border-style: double;
+    border-color: var(--primaryHighlight);
+}
+
+a:focus, a:hover {
+    border: 4px;
+    border-style: double;
+    border-color: var(--primaryHighlight);
+}
 
 * {
     font-family: 'Roboto Condensed', serif;
@@ -5,13 +16,13 @@
 }
 
 *:focus {
-    border: 3px;
+    border: 4px;
     border-style: double;
     border-color: var(--primaryHighlight);
 }
 
-a:focus {
-    border: 3px;
+a:focus, a:hover {
+    border: 4px;
     border-style: double;
     border-color: var(--primaryHighlight);
 }
