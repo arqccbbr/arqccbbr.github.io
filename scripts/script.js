@@ -1,3 +1,5 @@
+
+
 var currentContrast = 1;
 var currentFontSize = 1; 
 
@@ -431,3 +433,6 @@ function loadListeners() {
 document.addEventListener("load", 
     ignition()
 );
+
+
+
