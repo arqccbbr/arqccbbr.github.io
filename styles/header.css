@@ -1,3 +1,15 @@
+*:focus {
+    border: 4px;
+    border-style: double;
+    border-color: var(--primaryHighlight);
+}
+
+a:focus {
+    border: 4px;
+    border-style: double;
+    border-color: var(--primaryHighlight);
+}
+
 #main_header {
     background-color: var(--bgPrimary);
     padding: var(--spaceSmall);

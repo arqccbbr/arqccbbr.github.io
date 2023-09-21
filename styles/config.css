@@ -128,3 +128,15 @@
     --touchSize:25px;
     --touchSizeLarge:30px;
 }
+
+*:focus {
+    border: 4px;
+    border-style: double;
+    border-color: var(--primaryHighlight);
+}
+
+a:focus {
+    border: 4px;
+    border-style: double;
+    border-color: var(--primaryHighlight);
+}
