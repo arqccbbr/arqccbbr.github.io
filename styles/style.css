@@ -9,6 +9,12 @@
     border-color: var(--primaryHighlight);
 }
 
+a:focus {
+    border: 4px;
+    border-style: double;
+    border-color: var(--primaryHighlight);
+}
+
 .margem-minima-abaixo {
     margin: 0px;
     margin-bottom: var(--spaceTiny);
