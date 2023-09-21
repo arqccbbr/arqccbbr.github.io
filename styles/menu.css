@@ -1,3 +1,9 @@
+*:focus {
+    border: 4px;
+    border-style: double;
+    border-color: var(--primaryHighlight);
+}
+
 .navbar {
     overflow: hidden;
     background-color: var(--bgPrimary);

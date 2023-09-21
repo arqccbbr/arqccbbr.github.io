@@ -1,3 +1,8 @@
+*:focus {
+    border: 4px;
+    border-style: double;
+    border-color: var(--primaryHighlight);
+}
 
 main {
     background-color: var(--bgSecondary);
