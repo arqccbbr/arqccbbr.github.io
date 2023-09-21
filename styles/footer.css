@@ -53,3 +53,23 @@ a:focus {
     text-align: center;
     color: var(--primary);
 }
+
+/********************************************************************/
+/*** alerta com a carta e mensagem de que não envia e-mail **/
+/********************************************************************/
+
+.box-msg-rodape {
+    width: 100%;
+    background-color: var(--bgPrimary); 
+    display: flex;
+}
+
+.box-msg-rodape .box-msg-rodape_box-img {
+    vertical-align: middle;
+    padding: var(--spaceLarge); 
+}
+
+.box-msg-rodape_box-txt {
+    margin-left: var(--spaceDefault);
+    padding: var(--spaceLarge);
+}

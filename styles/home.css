@@ -41,26 +41,6 @@ main {
 }
 
 /********************************************************************/
-/*** alerta com a carta e mensagem de que não envia e-mail **/
-/********************************************************************/
-
-.box-alerta {
-    width: 100%;
-    background-color: var(--bgPrimary); 
-    display: flex;
-}
-
-.box-alerta .box-alerta_box-img {
-    vertical-align: middle;
-    padding: var(--spaceLarge); 
-}
-
-.box-alerta_box-txt {
-    margin-left: var(--spaceDefault);
-    padding: var(--spaceLarge);
-}
-
-/********************************************************************/
 /*** headline e box com produtos **/
 /********************************************************************/
 

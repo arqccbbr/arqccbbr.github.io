@@ -10,6 +10,10 @@ a:focus {
     border-color: var(--primaryHighlight);
 }
 
+p {
+    color: var(--secondary);
+}
+
 #main_content {
     background-color: var(--bgSecondary);
     padding-bottom: var(--spaceLarge);
@@ -18,6 +22,7 @@ a:focus {
 #main_content h1 {
     font-size: var(--fontSizeXLarge);
     color: var(--primary);
+    text-transform: uppercase;
 }
 
 #main_content h2 {
@@ -134,7 +139,6 @@ a:focus {
     background-color: var(--bgTertiary);
     color: var(--onBgTertiary);
     font-size: var(--fontSize);
-    font-weight: bold;
 }
 
 .box-subpagina .box-link_descricao {
@@ -145,6 +149,12 @@ a:focus {
     background-color: var(--bgPrimary);
     color: var(--secondary);
     font-size: var(--fontSize);
+}
+
+.box-subpagina .box-subpagina_centralizado {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
 }
 
 

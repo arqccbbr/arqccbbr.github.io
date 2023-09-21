@@ -20,6 +20,14 @@ a:focus {
     margin-bottom: var(--spaceTiny);
 }
 
+.sem-margem {
+    margin: 0px;
+}
+
+.sem-margem-acima {
+    margin-top: 0px;
+}
+
 .margem-abaixo {
     margin: 0px;
     margin-bottom: var(--spaceDefault);
