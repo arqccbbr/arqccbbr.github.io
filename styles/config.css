@@ -111,8 +111,8 @@
     --imgInvertColor: 0%;
     --imgOpacity: 60%;
 
-    --displayMenuAcessibilidade: none;
-    --displayMenuPrincipal: none;
+    --displayMenuAcessibilidade:none;
+    --displayMenuPrincipal:none;
 
     --spaceTiny: 2px;
     --spaceSmall: 5px;
@@ -130,14 +130,3 @@
 }
 
 
-*:focus {
-    border: 4px;
-    border-style: double;
-    border-color: var(--primaryHighlight);
-}
-
-a:focus, a:hover {
-    border: 4px;
-    border-style: double;
-    border-color: var(--primaryHighlight);
-}
